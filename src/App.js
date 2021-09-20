@@ -1,24 +1,85 @@
-import logo from './logo.svg';
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
+import 'bootstrap-css-only/css/bootstrap.min.css'; 
+import 'mdbreact/dist/css/mdb.css';
 import './App.css';
+import { MDBDataTable } from 'mdbreact';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
+  const data = {
+    columns: [
+      {
+        label: 'Id Festivo',
+        field: 'festivo',
+        sort: 'asc',
+        width: 150,
+      },
+      {
+        label: 'Dia Festivo',
+        field: 'dia',
+        sort: 'asc',
+        width: 270
+      },
+      {
+        label: 'Descripcion',
+        field: 'descripcion',
+        sort: 'asc',
+        width: 200
+      },
+      {
+        label: 'Id Proceso',
+        field: 'proceso',
+        sort: 'asc',
+        width: 100
+      },
+      {
+        label: 'Accion',
+        field: 'accion',
+        sort: 'asc',
+        width: 150
+      }
+    ],
+    rows: [
+      {
+        festivo: '926',
+        dia: '2021-07-01',
+        descripcion: 'prueba',
+        proceso: '368',
+        accion: <FontAwesomeIcon icon={faTrash} />
+      },
+      {
+        festivo: '943',
+        dia: '2021-07-12',
+        descripcion: 'ooo',
+        proceso: '368',
+        accion: <FontAwesomeIcon icon={faTrash} />
+      },
+      {
+        festivo: '964',
+        dia: '2021-07-15',
+        descripcion: 'prueba',
+        proceso: '368',
+        accion: <FontAwesomeIcon icon={faTrash} />
+      },
+      {
+        festivo: '968',
+        dia: '2021-07-21',
+        descripcion: 'ooo',
+        proceso: '368',
+        accion: <FontAwesomeIcon icon={faTrash} />
+      }
+    ]
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MDBDataTable
+      striped
+      bordered
+      small
+      data={data}
+      searchLabel="Buscar"
+    />
   );
 }
 
