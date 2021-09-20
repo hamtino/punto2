@@ -78,7 +78,9 @@ function App() {
       bordered
       small
       data={data}
+      infoLabel={["Elemento", "a", "de", "Elementos"]}
       searchLabel="Buscar"
+      paginationLabel={["Anterior", "Siguiente"]}
     />
   );
 }
