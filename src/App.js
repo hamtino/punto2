@@ -80,7 +80,7 @@ function App() {
       bordered
       small
       data={data}
-      infoLabel={["Elemento", "a", "de", "Elementos"]}
+      infoLabel={["Elemento", "hasta", "de", "Elementos"]}
       searchLabel="Buscar"
       paginationLabel={["Anterior", "Siguiente"]}
       entriesLabel="Elementos"
