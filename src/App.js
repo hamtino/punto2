@@ -81,6 +81,7 @@ function App() {
       infoLabel={["Elemento", "a", "de", "Elementos"]}
       searchLabel="Buscar"
       paginationLabel={["Anterior", "Siguiente"]}
+      entriesLabel="Elementos"
     />
   );
 }
