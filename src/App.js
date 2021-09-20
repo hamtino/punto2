@@ -73,6 +73,8 @@ function App() {
   };
 
   return (
+    <div>
+      <h3>INDRA TEST REACT</h3>
     <MDBDataTable
       striped
       bordered
@@ -83,6 +85,7 @@ function App() {
       paginationLabel={["Anterior", "Siguiente"]}
       entriesLabel="Elementos"
     />
+    </div>
   );
 }
 
