@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# para ver la aplicacion ejecute
 
 ### `npm install`
 
